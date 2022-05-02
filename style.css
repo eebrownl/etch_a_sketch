@@ -1,4 +1,14 @@
-.test {
-    color: red;
-    background-color: blue;
+body {
+    background-color: red;
+}
+
+.container {
+    height: 960px;
+    width: 960px;
+    background-color: gainsboro;
+    display: grid;
+}
+
+.cell {
+    border: 1px solid black;
 }

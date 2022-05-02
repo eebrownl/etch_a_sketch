@@ -1,6 +1,43 @@
-const testButton = document.querySelector('.test')
-testButton.addEventListener('click', logTesting)
+const container = document.querySelector('.container');
+//let gridSide = 80
 
-function logTesting() {
-    console.log('testing')
+//createGrid(gridSide);
+
+//function createGrid(gridSide) {
+ //   container.style.gridTemplateColumns = `repeat(${gridSide}, 1fr)`;
+ //   container.style.gridTemplateRows = `repeat(${gridSide}, 1fr)`;
+ //   let totalCells = gridSide ** 2
+
+
+ //   for (let i = 0; i < totalCells; i++) {
+  //      let cell = document.createElement('div');
+ //       container.appendChild(cell).className = 'cell';
+ //   }
+//}
+
+container.addEventListener('mouseover', etch)
+
+function etch(e) {
+    if (e.target!== container) {
+        e.target.style.backgroundColor = 'gray'
+    }
 }
+
+let sizeButton = document.querySelector('#requestGridSize');
+sizeButton.addEventListener('click', requestSize)
+
+function requestSize() {
+    let input = prompt('How long would you like the rows and columns to be?')
+    let size = parseInt(input)
+
+    container.style.gridTemplateColumns = `repeat(${size}, 1fr)`;
+    container.style.gridTemplateRows = `repeat(${size}, 1fr)`;
+    let totalCells = size ** 2
+
+
+    for (let i = 0; i < totalCells; i++) {
+        let cell = document.createElement('div');
+        container.appendChild(cell).className = 'cell';
+    }
+}
+
