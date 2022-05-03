@@ -1,14 +1,39 @@
+* {
+    box-sizing: border-box;
+}
+
+#buttons {
+    display:flex;
+    justify-content: center;
+    padding: 20px;
+}
+
+.buttonStyle {
+    background-color: black;
+    color:white;
+    font-size: 30px;
+    border-radius: 50px;
+    border-color: white;
+    padding:10px;
+    margin:10px;
+}
+
 body {
-    background-color: red;
+    background-color: crimson;
 }
 
 .container {
-    height: 960px;
-    width: 960px;
+    height: 700px;
+    width: 700px;
     background-color: gainsboro;
     display: grid;
 }
 
 .cell {
-    border: 1px solid black;
+    border: .25px solid black;
+}
+
+.metaContainer {
+    display: flex;
+    justify-content: center;
 }
